@@ -9,6 +9,8 @@ RUN pip install --no-cache \
                 supervisor==4.2.2 \
                 label-studio==1.0.1 \
                 git+https://github.com/heartexlabs/label-studio-ml-backend
+                
+RUN python -m spacy download ja_core_news_lg
 
 COPY uwsgi.ini /etc/uwsgi/
 COPY supervisord.conf /etc/supervisor/conf.d/

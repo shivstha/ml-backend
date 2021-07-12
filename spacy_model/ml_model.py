@@ -11,7 +11,7 @@ class JapaneseNER(LabelStudioMLBase):
         self.from_name, self.info = list(self.parsed_label_config.items())[0]
         self.to_name = self.info['to_name'][0]
         self.value = self.info['inputs'][0]['value']
-        self.model = spacy.load("ja_core_news_lg")
+        self.model = spacy.load("ja_core_news_md")
 
 
     def predict(self, tasks, **kwargs):
